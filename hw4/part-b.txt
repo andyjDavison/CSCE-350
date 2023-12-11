@@ -1,0 +1,19 @@
+1. I first built a skeleton outline, writing all the necessary methods and classes to create the BST. Then I went and implemented each method,
+seperately and tested each as I went through them. The methods I made were as follows, firstly a struct for the nodes, that would be apart of the tree
+each containing pointers to left and right children, and the data they hold. Next I made the insert method, which I did if the value being inserted was
+greater than the current node, go to the right child recursively, and if it was less than the current node, go to the left child recursively, and once I was at a leaf
+I would just have the node point to it. The next method was search, which did a similar thing as insert, but if it was equal to the current node, it was a successful
+search. Next I did the findMinValue and findMaxValue, which were essentially just reverses of eachother. To find the minValue I just recursively went
+to the left child of each node, and for max it was the right child. The next method was remove, which was trickier as there were more things to check. Essentially
+do the same data checking to see if the data to delete is greater than or less than left and right child, and recursively go through tree until we find the value
+then when we replace it we have to find out how many child nodes it has. If it has none its as simple as setting it as a null pointer, but if it has 1 you have to move
+that child node into its spot, and if it has 2 you have to find the minimum of the child nodes and make that the new parent. Finally, the inorderTraversal method. This
+was a recursive method, where we would go to the left most child, output the value, output the parent, then recursively get the right child. These were all private methods,
+and I used them as helper methods with the public BST methods, which include output. Then in main I just made it a while loop that doesnt exit until told by the user,
+otherwise you choose the operations you wish to perform, where you start out with an empty BST.
+
+2. One of the biggest challenges I encountered was the recursion aspect needed for pretty much every method.
+I actually had to end up drawing out the test case bst and go through it step by step to get my recursion correct.
+Especially, for the remove method as that one was longer than the others.
+
+3. No compilation instructions.
